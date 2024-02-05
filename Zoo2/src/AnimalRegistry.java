@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class AnimalRegistry {
+public class Animal {
     public final String name;
     public final String favoriteFood;
     public final int age;
@@ -10,7 +10,7 @@ public class AnimalRegistry {
     public final double height;
 
     // Initialization of the array for entering data about animals in the registry
-    public AnimalRegistry(String name, String favoriteFood, int age, LocalDate entryDate, double weight, double height) {
+    public Animal (String name, String favoriteFood, int age, LocalDate entryDate, double weight, double height) {
         this.name = name;
         this.favoriteFood = favoriteFood;
         this.age = age;
