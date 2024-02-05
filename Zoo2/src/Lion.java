@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
-public class Lion extends AnimalRegistry {
+public class Lion extends Animal {
     public final double tailLength;
 
     Lion(String name, String favoriteFood, int age, LocalDate entryDate, double weight, double height, double tailLength) {
