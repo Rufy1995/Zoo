@@ -36,11 +36,12 @@ public class Animal {
         return entryDate;
     }
 
-    public double getWeight() {
+    double getWeight() {
         return weight;
     }
 
-    public double getHeight() {
+    double getHeight() {
         return height;
     }
+
 }
