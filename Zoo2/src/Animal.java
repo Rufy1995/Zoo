@@ -1,16 +1,14 @@
 import java.time.LocalDate;
-import java.util.ArrayList;
 
-public class Animal {
-    public final String name;
-    public final String favoriteFood;
-    public final int age;
-    public final LocalDate entryDate;
-    public double weight;
-    public final double height;
+class Animal {
+    private final String name;
+    private final String favoriteFood;
+    private final int age;
+    private final LocalDate entryDate;
+    private final double weight;
+    private final double height;
 
-    // Initialization of the array for entering data about animals in the registry
-    public Animal (String name, String favoriteFood, int age, LocalDate entryDate, double weight, double height) {
+    Animal(String name, String favoriteFood, int age, LocalDate entryDate, double weight, double height) {
         this.name = name;
         this.favoriteFood = favoriteFood;
         this.age = age;
@@ -19,11 +17,11 @@ public class Animal {
         this.height = height;
     }
 
-    // Getter methods for retrieving data
     public String getName() {
         return name;
     }
 
+<<<<<<< Updated upstream
     public String getFavoriteFood() {
         return favoriteFood;
     }
@@ -37,6 +35,9 @@ public class Animal {
     }
 
     double getWeight() {
+=======
+    public double getWeight() {
+>>>>>>> Stashed changes
         return weight;
     }
 

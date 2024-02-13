@@ -1,7 +1,6 @@
 import java.time.LocalDate;
-import java.util.ArrayList;
 
-public class Eagle extends Animal {
+class Eagle extends Animal {
     public final double wingspan;
 
     Eagle(String name, String favoriteFood, int age, LocalDate entryDate, double weight, double height, double wingspan) {
@@ -11,5 +10,8 @@ public class Eagle extends Animal {
     public double getWingspan() {
         return wingspan;
     }
+<<<<<<< Updated upstream
     ArrayList<Eagle> eagles = new ArrayList<>();
+=======
+>>>>>>> Stashed changes
 }
