@@ -7,11 +7,8 @@ class Eagle extends Animal {
         super(name, favoriteFood, age, entryDate, weight, height);
         this.wingspan = wingspan;
     }
+
     public double getWingspan() {
         return wingspan;
     }
-<<<<<<< Updated upstream
-    ArrayList<Eagle> eagles = new ArrayList<>();
-=======
->>>>>>> Stashed changes
 }

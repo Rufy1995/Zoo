@@ -7,11 +7,8 @@ class Tiger extends Animal {
         super(name, favoriteFood, age, entryDate, weight, height);
         this.tailLength = tailLength;
     }
+
     public double getTailLength() {
         return tailLength;
     }
-<<<<<<< Updated upstream
-    ArrayList<Tiger> tigers = new ArrayList<>();
-=======
->>>>>>> Stashed changes
 }

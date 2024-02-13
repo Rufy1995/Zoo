@@ -21,28 +21,11 @@ class Animal {
         return name;
     }
 
-<<<<<<< Updated upstream
-    public String getFavoriteFood() {
-        return favoriteFood;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public LocalDate getEntryDate() {
-        return entryDate;
-    }
-
-    double getWeight() {
-=======
     public double getWeight() {
->>>>>>> Stashed changes
         return weight;
     }
 
-    double getHeight() {
+    public double getHeight() {
         return height;
     }
-
 }
