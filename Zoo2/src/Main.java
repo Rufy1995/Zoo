@@ -90,26 +90,59 @@ public class Main {
         eagles.add(new Eagle("hhhhh", "fish", 2, LocalDate.of(2023, 5, 8), 5, 30, 180));
         eagles.add(new Eagle("iiiii", "meat", 5, LocalDate.of(2022, 10, 18), 8, 45, 200));
 
-        // Calculation and printing of the heaviest lion
+        // specie piu pesante
         Lion heaviestLion = findMax(lions, "weight");
         System.out.println("The heaviest lion is: " + heaviestLion.getName() + " with a weight of " + heaviestLion.getWeight());
 
-        // Calculation and printing of the lightest lion
+        Tiger heaviestTiger = findMax(tigers, "weight");
+        System.out.println("The heaviest tiger is: " + heaviestTiger.getName() + " with a weight of " + heaviestTiger.getWeight());
+
+        Eagle heaviestEagle = findMax(eagles, "weight");
+        System.out.println("The heaviest eagle is: " + heaviestEagle.getName() + " with a weight of " + heaviestEagle.getWeight());
+
+
+        // specie piu leggera
         Lion lightestLion = findMin(lions, "weight");
         System.out.println("The lightest lion is: " + lightestLion.getName() + " with a weight of " + lightestLion.getWeight());
 
+        Tiger lightestTiger = findMin(tigers, "weight");
+        System.out.println("The lightest tiger is: " + lightestTiger.getName() + " with a weight of " + lightestTiger.getWeight());
 
-        // Similar calculations for tigers and eagles...
+        Eagle lightestEagle = findMin(eagles, "weight");
+        System.out.println("The lightest eagle is: " + lightestEagle.getName() + " with a weight of " + lightestEagle.getWeight());
 
-        // Calculation and printing of the tallest lion
+
+
+
+
+        // specie piu grande e piu piccola
         Lion tallestLion = findMax(lions, "height");
         System.out.println("The tallest lion is: " + tallestLion.getName() + " with a height of " + tallestLion.getHeight());
 
-        // Calculation and printing of the eagle with the maximum wingspan
+        Tiger tallestTiger = findMax(tigers, "height");
+        System.out.println("The tallest tiger is: " + tallestTiger.getName() + " with a height of " + tallestTiger.getHeight());
+
+        Eagle tallestEagle = findMax(eagles, "height");
+        System.out.println("The tallest eagle is: " + tallestEagle.getName() + " with a height of " + tallestEagle.getHeight());
+
+
+        Lion smallestLion = findMin(lions, "height");
+        System.out.println("The smallest lion is: " + smallestLion.getName() + " with a height of " + smallestLion.getHeight());
+
+        Tiger smallestTiger = findMin(tigers, "height");
+        System.out.println("The smallest tiger is: " + smallestTiger.getName() + " with a height of " + smallestTiger.getHeight());
+
+        Eagle smallestEagle = findMin(eagles, "height");
+        System.out.println("The smallest eagle is: " + smallestEagle.getName() + " with a height of " + smallestEagle.getHeight());
+
+
+
+
+        // Massima apertura alare
         Eagle maxWingspanEagle = findMax(eagles, "wingspan");
         System.out.println("The eagle with the maximum wingspan is: " + maxWingspanEagle.getName() + " with a wingspan of " + maxWingspanEagle.getWingspan());
 
-        // Calculation and printing of the species with the longest tail
+        // coda piu lunga
         Lion longestTailLion = findMax(lions, "tailLength2");
         Tiger longestTailTiger = findMax(tigers, "tailLength");
 
