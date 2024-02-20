@@ -1,14 +1,20 @@
 import java.time.LocalDate;
 
-class Tiger extends Animal {
-    public final double tailLength;
+public class Tiger extends AnimalWithTail {
 
-    Tiger(String name, String favoriteFood, int age, LocalDate entryDate, double weight, double height, double tailLength) {
-        super(name, favoriteFood, age, entryDate, weight, height);
-        this.tailLength = tailLength;
-    }
-
-    public double getTailLength() {
-        return tailLength;
+   public Tiger(String name, String favoriteFood, int age, LocalDate entryDate, double weight, double height, double tailLength) {
+        super(name, favoriteFood, age, entryDate, weight, height, tailLength);
     }
 }
+/*
+
+
+
+import java.time.LocalDate;
+
+public class Tiger extends AnimalWithTail {
+
+	public Tiger(String name, String favoriteFood, int age, LocalDate joinDate, double weight, double height, double tailLength) {
+		super(name, favoriteFood, age, joinDate, weight, height, tailLength);
+	}
+ */
