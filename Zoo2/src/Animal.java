@@ -1,18 +1,20 @@
-import java.time.LocalDate;
 
-class Animal {
+import java.time.LocalDate;
+import java.util.Objects;
+
+public abstract class Animal {
     private String name;
     private String favoriteFood;
     private int age;
-    private LocalDate entryDate;
+    private LocalDate joinDate;
     private double weight;
     private double height;
 
-    Animal(String name, String favoriteFood, int age, LocalDate entryDate, double weight, double height) {
+    protected Animal(String name, String favoriteFood, int age, LocalDate EntryDate, double weight, double height) {
         this.name = name;
         this.favoriteFood = favoriteFood;
         this.age = age;
-        this.entryDate = entryDate;
+        this.joinDate = EntryDate;
         this.weight = weight;
         this.height = height;
     }
@@ -41,12 +43,12 @@ class Animal {
         this.age = age;
     }
 
-    public LocalDate getEntryDate() {
-        return entryDate;
+    public LocalDate getJoinDate() {
+        return joinDate;
     }
 
-    public void setEntryDate(LocalDate entryDate) {
-        this.entryDate = entryDate;
+    public void setJoinDate(LocalDate joinDate) {
+        this.joinDate = joinDate;
     }
 
     public double getWeight() {
@@ -63,5 +65,28 @@ class Animal {
 
     public void setHeight(double height) {
         this.height = height;
+    }
+
+                                //chiedere a Davide
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Animal animal = (Animal) o;
+        return age == animal.age
+                && Double.compare(animal.weight, weight) == 0
+                && Double.compare(animal.height, height) == 0
+                && Objects.equals(name, animal.name)
+                && Objects.equals(favoriteFood, animal.favoriteFood)
+                && Objects.equals(joinDate, animal.joinDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, favoriteFood, age, joinDate, weight, height);
     }
 }

@@ -2,23 +2,23 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Main {
-    private static <T extends Animal> T findMin(ArrayList<T> animals, String attribute) {
+    private  <T extends Animal> T findMin(ArrayList<T> animals, String attribute) {
         T minAnimal = null;
         double minValue = Double.MAX_VALUE;
 
         for (T animal : animals) {
             double value;
-            switch (attribute) {
-                case "weight" -> value = animal.getWeight();
-                case "height" -> value = animal.getHeight();
-                case "tailLength" -> value = (animal instanceof Tiger) ? ((Tiger) animal).getTailLength() : 0;
-                case "tailLength2" -> value = (animal instanceof Lion) ? ((Lion) animal).getTailLength() : 0;
-                case "wingspan" -> value = (animal instanceof Eagle) ? ((Eagle) animal).getWingspan() : 0;
+            value = switch (attribute) {
+                case "weight" -> animal.getWeight();
+                case "height" -> animal.getHeight();
+                case "tailLength" -> (animal instanceof Tiger) ? ((Tiger) animal).getTailLength() : 0;
+                case "tailLength2" -> (animal instanceof Lion) ? ((Lion) animal).getTailLength() : 0;
+                case "wingspan" -> (animal instanceof Eagle) ? ((Eagle) animal).getWingspan() : 0;
                 default -> throw new IllegalArgumentException("Invalid attribute");
-            }
+            };
 
             if (value < minValue) {
-                minValue = value;
+                minValue = value; 
                 minAnimal = animal;
             }
         }
@@ -27,7 +27,7 @@ public class Main {
     }
 
 
-    private static <T extends Animal> T findMax(ArrayList<T> animals, String attribute) {
+    private  <T extends Animal> T findMax(ArrayList<T> animals, String attribute) {
         T maxAnimal = null;
         double maxValue = Double.MIN_VALUE;
 
@@ -51,7 +51,7 @@ public class Main {
         return maxAnimal;
     }
 
-    public static void main(String[] args) {
+    public void main(String[] args) {
         // Populate the ArrayLists
         ArrayList<Lion> lions = new ArrayList<>();
         lions.add(new Lion("Simba", "meat", 10, LocalDate.of(2023, 12, 20), 150.0, 150.0, 90.0));
@@ -134,4 +134,3 @@ public class Main {
 
     }
 }
-//sadsadfasf
