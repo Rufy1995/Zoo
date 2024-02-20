@@ -67,6 +67,7 @@ public abstract class Animal {
         this.height = height;
     }
 
+                                //chiedere a Davide
     @Override
     public boolean equals(Object o) {
         if (this == o) {
