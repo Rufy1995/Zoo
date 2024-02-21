@@ -3,6 +3,8 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+
+
 public class ZooManagementSystem {
     public static void main(String[] args) {
         List<Animal> zoo = new ArrayList<>();
@@ -39,7 +41,8 @@ public class ZooManagementSystem {
                 });
 
         // Find the animal with the longest tail
-        String longestTailAnimal = zoo.stream()
+        // Find the animal with the longest tail
+        zoo.stream()
                 .filter(animal -> animal instanceof Lion || animal instanceof Tiger)
                 .max(Comparator.comparingDouble(animal -> {
                     if (animal instanceof Lion) {
@@ -50,18 +53,18 @@ public class ZooManagementSystem {
                         return 0;
                     }
                 }))
-                .map(animal -> animal.getName())
-                .orElse("No animal has been found");
+                .ifPresent(longestTailAnimal -> {
+                    System.out.println("Animal with the longest tail : " + longestTailAnimal.getName()
+                            + " (" + ((Lion) longestTailAnimal).getTailLength() + " meters)");
+                });
 
-        System.out.println("Animal with the longest tail : " + longestTailAnimal);
-
-        // Find the animal with the largest wingspan (for eagles)
-        String largestWingspan = zoo.stream()
+// Find the animal with the largest wingspan (for eagles)
+        zoo.stream()
                 .filter(animal -> animal instanceof Eagle)
                 .max(Comparator.comparingDouble(animal -> ((Eagle) animal).getWingspan()))
-                .map(animal -> animal.getName())
-                .orElse("No eagle found");
-
-        System.out.println("Animal with the largest wingspan: " + largestWingspan);
+                .ifPresent(largestWingspanAnimal -> {
+                    System.out.println("Animal with the largest wingspan: " + largestWingspanAnimal.getName()
+                            + " (" + ((Eagle) largestWingspanAnimal).getWingspan() + " meters)");
+                });
     }
 }
