@@ -1,8 +1,16 @@
-import java.time.LocalDate;
+class Eagle extends Animal {
+    private double wingspan;
 
-public class Eagle extends AnimalWithWings {
+    public Eagle(String name, String favoriteFood, int age, String entryDate, double weight, double height, double wingspan) {
+        super(name, favoriteFood, age, entryDate, weight, height);
+        this.wingspan = wingspan;
+    }
 
-    public Eagle(String name, String favoriteFood, int age, LocalDate entryDate, double weight, double height, double wingspan) {
-        super(name, favoriteFood, age, entryDate, weight, height, wingspan);
+    public double getWingspan() {
+        return wingspan;
+    }
+
+    public void setWingspan(double wingspan) {
+        this.wingspan = wingspan;
     }
 }
